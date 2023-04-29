@@ -111,7 +111,7 @@ body {
 
   .player {
     display: flex;
-    margin-top: 5%;
+    margin-top: 10%;
   }
 
   .artist {
@@ -133,7 +133,7 @@ body {
   .album-image {
     width: 250px;
     height: 250px;
-    border-radius: 100px;
+    border-radius: 200px 300px 200px 250px;
   }
   .artist-track-name {
     margin-top: 10px;
