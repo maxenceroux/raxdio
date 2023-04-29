@@ -3,7 +3,7 @@ import React from "react";
 class RadioPlayer extends React.Component {
   constructor(props) {
     super(props);
-    this.audio = new Audio("https://raxdio.com/radio"); // replace with your radio stream URL
+    this.audio = new Audio("https://raxdio.com/radio");
     this.state = { isPlaying: false };
   }
 

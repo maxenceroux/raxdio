@@ -4,8 +4,10 @@ import ScrollBannerHorizontal from "./components/scroll-banner-horizontal";
 import "./styles.css";
 import "./styles-mobile.css";
 import RadioPlayer from "./components/RadioPlayer";
+import AboutUs from "./components/AboutUs";
 function App() {
   const [data, setData] = useState(null);
+  const [showArtist, setShowArtist] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,9 +30,15 @@ function App() {
       <div className="content">
         <div className="radio">
           <p className="vertical-text">RAX</p>
-          <p className="horizontal-text">DI</p>
+          <p
+            className="horizontal-text"
+            onClick={() => setShowArtist(!showArtist)}
+          >
+            DI
+          </p>
           <p className="vertical-text">O</p>
         </div>
+
         <div className="now-playing">
           <div className="now-playing-content">
             <div className="player">
@@ -40,6 +48,13 @@ function App() {
             </div>
             {data ? (
               <div className="artist">
+                <div
+                  className={`about-us-wrapper ${
+                    !showArtist ? "show-flex" : "hidden"
+                  }`}
+                >
+                  <AboutUs />
+                </div>
                 <div className="artist-track">
                   {data.image_url ? (
                     <img
@@ -49,7 +64,7 @@ function App() {
                     />
                   ) : (
                     <img
-                      src={require("./assets/album-image-red.png")}
+                      src={require("./assets/Component 1.png")}
                       alt="album"
                       className="album-image"
                     />
@@ -60,12 +75,15 @@ function App() {
                 </div>
                 {data.content ? (
                   <div
-                    className="artist-info"
+                    className={`artist-info ${showArtist ? "" : "hidden"}`}
                     id="scrollbar1"
                     dangerouslySetInnerHTML={{ __html: data.content }}
                   ></div>
                 ) : (
-                  <div className="artist-info" id="scrollbar1">
+                  <div
+                    className={`artist-info ${showArtist ? "" : "hidden"}`}
+                    id="scrollbar1"
+                  >
                     Nothing on this artist or album. We may have gone down a
                     rabbit hole of obscure music. Spice up the artist's{" "}
                     <a

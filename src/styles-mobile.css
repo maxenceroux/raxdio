@@ -9,6 +9,28 @@
 
 /* styles for mobile screens */
 @media only screen and (max-width: 1000px) {
+  .about-us-wrapper {
+    order: 2;
+  }
+  .about-us {
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 20px;
+    overflow: scroll;
+    max-height: 200px;
+    max-width: 300px;
+  }
+  .credits {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .icons {
+    justify-content: center;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
   .album-image {
     width: 150px;
     height: 150px;
@@ -24,6 +46,7 @@
   }
   .horizontal-text {
     padding: 0px;
+    cursor: pointer;
   }
 
   .content {
@@ -90,6 +113,7 @@
   }
   .horizontal-text {
     padding: 0px;
+    cursor: pointer;
   }
   .play-button {
     width: 100px;

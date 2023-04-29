@@ -41,6 +41,7 @@ body {
 
 .horizontal-text {
   margin: 0;
+  cursor: pointer;
 }
 .now-playing {
   display: flex;
@@ -71,7 +72,17 @@ body {
   padding-right: 50px;
   font-family: "kaerukaeru", sans-serif;
 }
-
+.icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
 .artist-name {
   margin-top: 20px;
   margin-bottom: 0px;
@@ -81,8 +92,29 @@ body {
   color: #ad5f5f;
 }
 
+.hidden {
+  display: none;
+}
+.show-flex {
+  display: flex;
+}
 /* styles for mobile screens */
 @media only screen and (min-width: 1000px) {
+  .credits {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .about-us-wrapper {
+    width: 35%;
+    flex-direction: column;
+  }
+  .about-us {
+    font-size: 22px;
+  }
+  .about-us-text {
+    max-height: 350px;
+    overflow: auto;
+  }
   .content {
     flex-direction: row;
   }
@@ -99,6 +131,7 @@ body {
   }
   .horizontal-text {
     padding: 40px;
+    cursor: pointer;
   }
 
   .now-playing-content {
@@ -123,6 +156,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .artist-track {
@@ -160,6 +194,7 @@ body {
   }
   .horizontal-text {
     padding: 20px;
+    cursor: pointer;
   }
 
   .now-playing-text {
@@ -194,5 +229,6 @@ body {
   }
   .horizontal-text  {
     padding: 20px;
+    cursor: pointer;
   }
 }
