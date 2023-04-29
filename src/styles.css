@@ -7,89 +7,111 @@
   src: url("./assets/fonts/CothamSans.otf") format("truetype");
 }
 
+body {
+  margin: 0px;
+  color: #e3dfcf;
+  font-family: "global";
+}
+
+.App {
+  background-image: url("assets/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.oe {
+  font-family: "kaerukaeru", sans-serif;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.content {
+  display: flex;
+  height: 90vh;
+}
+.radio {
+  margin: 0;
+  font-family: "kaerukaeru", sans-serif;
+}
+.vertical-text {
+  margin: 0;
+  text-orientation: upright;
+}
+
+.horizontal-text {
+  margin: 0;
+}
+.now-playing {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+.now-playing-content {
+  display: flex;
+  flex-direction: column;
+  color: #ad5f5f;
+  justify-content: center;
+  font-size: 30px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+.play-button {
+  cursor: pointer;
+}
+.player {
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  padding-right: 50px;
+  font-family: "kaerukaeru", sans-serif;
+}
+
+.artist-name {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.artist-info a {
+  color: #ad5f5f;
+}
+
 /* styles for mobile screens */
 @media only screen and (min-width: 1000px) {
-  .radio {
-    font-size: 150px;
-  }
-
-  body {
-    margin: 0px;
-    color: #e3dfcf;
-    font-family: "global";
-  }
-  .App {
-    background-image: url("assets/background-image.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
-  .oe {
-    font-family: "kaerukaeru", sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
   .content {
-    display: flex;
     flex-direction: row;
-    height: 90vh;
   }
   .radio {
-    margin: 0;
     margin-left: 40px;
     font-size: 140px;
     height: 100%;
-    font-family: "kaerukaeru", sans-serif;
   }
   .vertical-text {
-    margin: 0;
     writing-mode: vertical-lr;
-    text-orientation: upright;
   }
   .horizontal-text {
-    margin: 0;
     padding: 40px;
   }
 
-  .now-playing {
-    display: flex;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-  }
   .now-playing-content {
-    display: flex;
-    flex-direction: column;
-    color: #ad5f5f;
-    justify-content: center;
-    font-size: 30px;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /* justify-content: center; */
-    align-items: center;
-    position: relative;
     background-image: url("assets/ellipse-2.svg");
     background-size: 100% 90%;
-    background-repeat: no-repeat;
   }
 
   .play-button {
     width: 150px;
     height: 150px;
     padding-top: 25px;
-    cursor: pointer;
   }
 
   .player {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    padding-right: 50px;
     margin-top: 5%;
-    font-family: "kaerukaeru", sans-serif;
   }
 
   .artist {
@@ -107,11 +129,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .artist-name {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    text-align: center;
   }
 
   .album-image {
@@ -134,7 +151,41 @@
     min-width: 400px;
     text-overflow: ellipsis;
   }
-  .artist-info a {
-    color: #ad5f5f;
+}
+@media only screen and (max-height: 1000px) {
+  .radio {
+    font-size: 110px;
+  }
+  .now-playing-text {
+    font-size: 80px;
+  }
+  .artist-info {
+    max-height: 150px;
+  }
+  .artist-track {
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .now-playing-text {
+    font-size: 80px;
+  }
+  .artist-info {
+    max-height: 150px;
+  }
+  .artist-track {
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .artist {
+    padding: 0px;
   }
 }

@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("https://raxdio.com/currently_playing");
+      const response = await fetch("http://localhost:8002/currently_playing");
       const json = await response.json();
       setData(json);
     };
