@@ -90,6 +90,9 @@ body {
     margin-left: 40px;
     font-size: 140px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .vertical-text {
     writing-mode: vertical-lr;
@@ -100,7 +103,7 @@ body {
 
   .now-playing-content {
     background-image: url("assets/ellipse-2.svg");
-    background-size: 100% 90%;
+    background-size: 100% 95%;
   }
 
   .play-button {
@@ -147,13 +150,13 @@ body {
     font-size: 22px;
     overflow: auto;
     max-height: 300px;
-    min-width: 400px;
+    max-width: 800px;
     text-overflow: ellipsis;
   }
 }
 @media only screen and (max-height: 1000px) {
   .radio {
-    font-size: 90px;
+    font-size: 100px;
   }
   .horizontal-text {
     padding: 20px;
@@ -162,9 +165,7 @@ body {
   .now-playing-text {
     font-size: 80px;
   }
-  .artist-info {
-    max-height: 150px;
-  }
+
   .artist-track {
     display: flex;
     margin-left: 10%;

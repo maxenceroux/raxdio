@@ -5,24 +5,40 @@ const ScrollBannerHorizontal = () => {
     <div className="scroll-container">
       <div className="scroll-text">
         <p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
         </p>
         <p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
-          LIVE 24/7<p className="oe"> œ </p>LIVE 24/7<p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
+          LIVE 24/7<p className="oe"> œ </p>FREE BRITNEY MUSIC
+          <p className="oe"> œ </p>
         </p>
       </div>
     </div>

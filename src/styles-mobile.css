@@ -9,8 +9,6 @@
 
 /* styles for mobile screens */
 @media only screen and (max-width: 1000px) {
-  .scroll-container {
-  }
   .album-image {
     width: 150px;
     height: 150px;
@@ -88,6 +86,7 @@
   .album-image {
     width: 100px;
     height: 100px;
+    border-radius: 200px 300px 200px 250px;
   }
   .horizontal-text {
     padding: 0px;

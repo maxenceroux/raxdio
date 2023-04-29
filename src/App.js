@@ -48,17 +48,37 @@ function App() {
                       className="album-image"
                     />
                   ) : (
-                    <p></p>
+                    <img
+                      src={require("./assets/album-image-red.png")}
+                      alt="album"
+                      className="album-image"
+                    />
                   )}
 
                   <p className="artist-name">{data.artist_name}</p>
                   <p className="artist-track-name">{data.track_name}</p>
                 </div>
-                <div
-                  className="artist-info"
-                  id="scrollbar1"
-                  dangerouslySetInnerHTML={{ __html: data.content }}
-                ></div>
+                {data.content ? (
+                  <div
+                    className="artist-info"
+                    id="scrollbar1"
+                    dangerouslySetInnerHTML={{ __html: data.content }}
+                  ></div>
+                ) : (
+                  <div className="artist-info" id="scrollbar1">
+                    Nothing on this artist or album. We may have gone down a
+                    rabbit hole of obscure music. Spice up the artist's{" "}
+                    <a
+                      href={
+                        "https://www.last.fm/music/" +
+                        data.artist_name +
+                        "/+wiki"
+                      }
+                    >
+                      Last FM profile.
+                    </a>
+                  </div>
+                )}
               </div>
             ) : (
               <p>Nothing playling</p>
