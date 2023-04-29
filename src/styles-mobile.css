@@ -9,6 +9,8 @@
 
 /* styles for mobile screens */
 @media only screen and (max-width: 1000px) {
+  .scroll-container {
+  }
   .album-image {
     width: 150px;
     height: 150px;
@@ -21,6 +23,9 @@
     margin-bottom: 20px;
     font-size: 100px;
     font-family: "kaerukaeru", sans-serif;
+  }
+  .horizontal-text {
+    padding: 0px;
   }
 
   .content {
@@ -83,6 +88,9 @@
   .album-image {
     width: 100px;
     height: 100px;
+  }
+  .horizontal-text {
+    padding: 0px;
   }
   .play-button {
     width: 100px;
