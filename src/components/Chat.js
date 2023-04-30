@@ -90,7 +90,7 @@ const Chat = ({ isVisible }) => {
           <input
             type="text"
             name="message"
-            placeholder="Tell us what you think here"
+            placeholder="What's up?"
             className="input-text"
             autoComplete="off"
             onChange={handleInputChange}
