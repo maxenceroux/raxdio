@@ -5,9 +5,12 @@ import "./styles.css";
 import "./styles-mobile.css";
 import RadioPlayer from "./components/RadioPlayer";
 import AboutUs from "./components/AboutUs";
+import Chat from "./components/Chat";
+import { ReactComponent as MessageLogo } from "./assets/messages.svg";
 function App() {
   const [data, setData] = useState(null);
   const [showArtist, setShowArtist] = useState(true);
+  const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -102,6 +105,17 @@ function App() {
               <p>Nothing playling</p>
             )}
           </div>
+        </div>
+        <div>
+          <MessageLogo
+            id="chat-logo"
+            onClick={() => {
+              setShowChat(!showChat);
+            }}
+          />
+        </div>
+        <div className={`chat ${showChat ? "" : "hidden"}`}>
+          <Chat isVisible={showChat} />
         </div>
       </div>
     </div>
