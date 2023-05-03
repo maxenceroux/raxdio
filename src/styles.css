@@ -114,13 +114,21 @@ body {
 .chat-text {
   position: absolute;
   height: 77%;
-  width: 500px;
+  width: 0px;
   right: 0;
   /* background-color: black; */
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 500px; /* set final width to 500px */
+  }
 }
 .input-text {
   /* border-radius: 30px; */
@@ -195,6 +203,27 @@ input:focus {
 }
 /* styles for mobile screens */
 @media only screen and (min-width: 1000px) {
+  .chat-text {
+    border-bottom-left-radius: 30px;
+    animation: expand 0.3s forwards;
+  }
+  .no-preceding-track {
+    margin-left: 12%;
+  }
+  .no-next-track {
+    margin-right: 16%;
+  }
+  .track-selection {
+    font-size: 75px;
+    cursor: pointer;
+  }
+  .previous-track {
+    margin-left: 11%;
+  }
+  .next-track {
+    margin-right: 15%;
+    margin-left: 20px;
+  }
   .credits {
     font-size: 20px;
     margin-top: 20px;
@@ -256,7 +285,7 @@ input:focus {
 
   .artist-track {
     display: flex;
-    margin-left: 12%;
+    margin-left: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -274,7 +303,7 @@ input:focus {
   }
 
   .artist-info {
-    margin-right: 16%;
+    /* margin-right: 20px; */
     margin-left: 8%;
     font-size: 22px;
     overflow: auto;
@@ -293,12 +322,12 @@ input:focus {
   }
 
   .now-playing-text {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   .artist-track {
     display: flex;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -307,7 +336,7 @@ input:focus {
 
 @media only screen and (max-width: 1100px) {
   .now-playing-text {
-    font-size: 80px;
+    font-size: 70px;
   }
   .artist-info {
     max-height: 150px;

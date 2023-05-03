@@ -9,6 +9,16 @@
 
 /* styles for mobile screens */
 @media only screen and (max-width: 1000px) {
+  .previous-track {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+  }
+  .next-track {
+    position: absolute;
+    right: 20%;
+    top: 15%;
+  }
   #chat-logo {
     top: 24%;
     right: 0;
@@ -29,7 +39,7 @@
     width: 100%;
     bottom: 0;
     border-top-right-radius: 30px;
-    border-bottom-left-radius: 0px;
+    border-top-left-radius: 30px;
   }
   .user-info {
     justify-content: center;

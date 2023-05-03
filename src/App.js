@@ -8,15 +8,17 @@ import AboutUs from "./components/AboutUs";
 import Chat from "./components/Chat";
 import { ReactComponent as MessageLogo } from "./assets/messages.svg";
 function App() {
-  const [data, setData] = useState(null);
+  const [tracks, setTracks] = useState(null);
   const [showArtist, setShowArtist] = useState(true);
   const [showChat, setShowChat] = useState(false);
+  const [chosenTrackIndex, setChosenTrackIndex] = useState(0);
+  const [playingInfo, setPlayingInfo] = useState("now playing");
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("http://localhost:8002/currently_playing");
       const json = await response.json();
-      setData(json);
+      setTracks(json);
     };
 
     // Fetch data initially when component mounts
@@ -27,16 +29,41 @@ function App() {
     // Clean up the timer when component unmounts
     return () => clearInterval(intervalId);
   }, []);
+  const handlePreviousTrack = () => {
+    if (tracks && chosenTrackIndex < tracks.length - 1) {
+      setChosenTrackIndex(chosenTrackIndex + 1);
+    }
+    if (chosenTrackIndex + 1 === 1) {
+      setPlayingInfo("previous track");
+    }
+    if (chosenTrackIndex + 1 === 2) {
+      setPlayingInfo("previous*2 track");
+    }
+  };
+  const handleNextTrack = () => {
+    if (tracks && chosenTrackIndex > 0) {
+      setChosenTrackIndex(chosenTrackIndex - 1);
+    }
+    if (chosenTrackIndex - 1 === 0) {
+      setPlayingInfo("now playing");
+    }
+    if (chosenTrackIndex - 1 === 1) {
+      setPlayingInfo("previous track");
+    }
+  };
+  const handleAboutUs = () => {
+    setShowArtist(!showArtist);
+    setChosenTrackIndex(0);
+    setPlayingInfo("now playing");
+  };
+
   return (
     <div className="App">
       <ScrollBannerHorizontal />
       <div className="content">
         <div className="radio">
           <p className="vertical-text">RAX</p>
-          <p
-            className="horizontal-text"
-            onClick={() => setShowArtist(!showArtist)}
-          >
+          <p className="horizontal-text" onClick={handleAboutUs}>
             DI
           </p>
           <p className="vertical-text">O</p>
@@ -47,10 +74,24 @@ function App() {
             <div className="player">
               <RadioPlayer />
 
-              <div className="now-playing-text">now playing</div>
+              <div className="now-playing-text">{playingInfo}</div>
             </div>
-            {data ? (
-              <div className="artist">
+            {tracks ? (
+              <div
+                className={
+                  chosenTrackIndex === 2
+                    ? "artist no-preceding-track"
+                    : "artist"
+                }
+              >
+                {chosenTrackIndex < 2 && showArtist && (
+                  <div
+                    onClick={handlePreviousTrack}
+                    className="previous-track track-selection"
+                  >
+                    &lt;
+                  </div>
+                )}
                 <div
                   className={`about-us-wrapper ${
                     !showArtist ? "show-flex" : "hidden"
@@ -59,9 +100,9 @@ function App() {
                   <AboutUs />
                 </div>
                 <div className="artist-track">
-                  {data.image_url ? (
+                  {tracks[chosenTrackIndex].artist_image ? (
                     <img
-                      src={data.image_url}
+                      src={tracks[chosenTrackIndex].artist_image}
                       alt="album"
                       className="album-image"
                     />
@@ -73,18 +114,28 @@ function App() {
                     />
                   )}
 
-                  <p className="artist-name">{data.artist_name}</p>
-                  <p className="artist-track-name">{data.track_name}</p>
+                  <p className="artist-name">
+                    {tracks[chosenTrackIndex].artist}
+                  </p>
+                  <p className="artist-track-name">
+                    {tracks[chosenTrackIndex].title}
+                  </p>
                 </div>
-                {data.content ? (
+                {tracks[chosenTrackIndex].description ? (
                   <div
-                    className={`artist-info ${showArtist ? "" : "hidden"}`}
+                    className={`artist-info ${showArtist ? "" : "hidden"} ${
+                      chosenTrackIndex === 0 ? "no-next-track" : ""
+                    }`}
                     id="scrollbar1"
-                    dangerouslySetInnerHTML={{ __html: data.content }}
+                    dangerouslySetInnerHTML={{
+                      __html: tracks[chosenTrackIndex].description,
+                    }}
                   ></div>
                 ) : (
                   <div
-                    className={`artist-info ${showArtist ? "" : "hidden"}`}
+                    className={`artist-info ${showArtist ? "" : "hidden"} ${
+                      chosenTrackIndex === 0 ? "no-next-track" : ""
+                    }`}
                     id="scrollbar1"
                   >
                     Nothing on this artist or album. We may have gone down a
@@ -92,12 +143,20 @@ function App() {
                     <a
                       href={
                         "https://www.last.fm/music/" +
-                        data.artist_name +
+                        tracks[chosenTrackIndex].artist_name +
                         "/+wiki"
                       }
                     >
                       Last FM profile.
                     </a>
+                  </div>
+                )}
+                {chosenTrackIndex > 0 && (
+                  <div
+                    onClick={handleNextTrack}
+                    className="next-track track-selection"
+                  >
+                    &gt;
                   </div>
                 )}
               </div>
