@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8002/currently_playing");
+      const response = await fetch("https://raxdio.com/currently_playing");
       const json = await response.json();
       setTracks(json);
     };
@@ -29,6 +29,9 @@ function App() {
     // Clean up the timer when component unmounts
     return () => clearInterval(intervalId);
   }, []);
+  const handleCancelClick = () => {
+    setShowChat(false);
+  };
   const handlePreviousTrack = () => {
     if (tracks && chosenTrackIndex < tracks.length - 1) {
       setChosenTrackIndex(chosenTrackIndex + 1);
@@ -128,7 +131,10 @@ function App() {
                     }`}
                     id="scrollbar1"
                     dangerouslySetInnerHTML={{
-                      __html: tracks[chosenTrackIndex].description,
+                      __html: tracks[chosenTrackIndex].description.replace(
+                        /(<a[^>]+)>(.+?)<\/a>/gi,
+                        '$1 target="_blank">$2</a>'
+                      ),
                     }}
                   ></div>
                 ) : (
@@ -143,9 +149,10 @@ function App() {
                     <a
                       href={
                         "https://www.last.fm/music/" +
-                        tracks[chosenTrackIndex].artist_name +
+                        tracks[chosenTrackIndex].artist +
                         "/+wiki"
                       }
+                      target="_blank"
                     >
                       Last FM profile.
                     </a>
@@ -174,7 +181,7 @@ function App() {
           />
         </div>
         <div className={`chat ${showChat ? "" : "hidden"}`}>
-          <Chat isVisible={showChat} />
+          <Chat isVisible={showChat} handleCancelClick={handleCancelClick} />
         </div>
       </div>
     </div>

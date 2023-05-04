@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import io from "socket.io-client";
+import { ReactComponent as Cancel } from "../assets/cancel.svg";
 
-const Chat = ({ isVisible }) => {
+const Chat = ({ isVisible, handleCancelClick }) => {
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState(
     `guest${Math.floor(Math.random() * 100000)}`
@@ -38,6 +39,7 @@ const Chat = ({ isVisible }) => {
       }
     }
   };
+
   const socketRef = useRef();
 
   useLayoutEffect(() => {
@@ -74,6 +76,7 @@ const Chat = ({ isVisible }) => {
       className="chat-text"
       style={{ display: isVisible ? "block" : "none" }}
     >
+      <Cancel id="close-chat" onClick={handleCancelClick} />
       <ul ref={scrollableRef} className="messages">
         {messages.map((msg, index) => (
           <li className="message" key={index}>
