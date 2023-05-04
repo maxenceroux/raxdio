@@ -219,21 +219,21 @@ input:focus {
     animation: expand 0.3s forwards;
   }
   .no-preceding-track {
-    margin-left: 12%;
+    /* margin-left: 12%; */
   }
   .no-next-track {
-    margin-right: 16%;
+    /* margin-right: 16%; */
   }
   .track-selection {
     font-size: 75px;
     cursor: pointer;
   }
   .previous-track {
-    margin-left: 11%;
+    /* margin-left: 11%; */
   }
   .next-track {
-    margin-right: 15%;
-    margin-left: 20px;
+    /* margin-right: 15%;
+    margin-left: 20px; */
   }
   .credits {
     font-size: 20px;
@@ -242,12 +242,14 @@ input:focus {
   .about-us-wrapper {
     width: 35%;
     flex-direction: column;
+    /* max-height: 500px; */
+    overflow: auto;
   }
   .about-us {
     font-size: 22px;
   }
   .about-us-text {
-    max-height: 350px;
+    max-height: 300px;
     overflow: auto;
   }
   .content {
@@ -286,9 +288,11 @@ input:focus {
   }
 
   .artist {
-    padding-left: 70px;
+    padding-left: 20%;
+    padding-right: 24%;
     margin-bottom: 25%;
     display: flex;
+    column-gap: 50px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -315,11 +319,11 @@ input:focus {
 
   .artist-info {
     /* margin-right: 20px; */
-    margin-left: 8%;
+    /* margin-left: 8%; */
     font-size: 22px;
     overflow: auto;
     max-height: 300px;
-    max-width: 800px;
+    /* max-width: 20%; */
     text-overflow: ellipsis;
   }
 }
