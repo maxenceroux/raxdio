@@ -1,0 +1,52 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.schedule__header {
+  display: flex;
+  flex-direction: row;
+  background-color: #f6f6f6;
+  font-weight: bold;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.schedule__hour-column {
+  flex: 0 0 80px;
+  min-width: 80px;
+}
+
+.schedule__day-column {
+  flex: 1;
+}
+
+.schedule__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.schedule__hour-row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+}
+
+.schedule__hour-cell {
+  flex: 0 0 80px;
+  min-width: 80px;
+  padding: 8px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.schedule__day-cell {
+  flex: 1;
+  padding: 8px;
+  border-left: 1px solid #ccc;
+  text-align: center;
+}
