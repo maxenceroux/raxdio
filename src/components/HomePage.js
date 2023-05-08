@@ -11,8 +11,6 @@ import Chat from "./Chat";
 import { ReactComponent as CalendarLogo } from "../assets/calendar.svg";
 import { ReactComponent as MessageLogo } from "../assets/messages.svg";
 function HomePage() {
-  const audioRef = useRef(new Audio("https://raxdio.com/radio"));
-
   const [tracks, setTracks] = useState(null);
   const [showArtist, setShowArtist] = useState(true);
   const [showChat, setShowChat] = useState(false);
@@ -80,7 +78,7 @@ function HomePage() {
         <div className="now-playing">
           <div className="now-playing-content">
             <div className="player">
-              <RadioPlayer audio={audioRef.current} />
+              <RadioPlayer />
 
               <div className="now-playing-text">{playingInfo}</div>
             </div>
