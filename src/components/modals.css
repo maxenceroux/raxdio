@@ -1,0 +1,71 @@
+.modal-content {
+  padding: 20px;
+}
+
+.input-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+}
+button {
+  background-color: #e3dfcf90;
+  border-radius: 20px;
+  border: solid 1px #e3dfcf;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "global";
+  height: 25px;
+  width: 70px;
+  color: white;
+}
+
+button:hover {
+  padding: 1px;
+  font-size: 16px;
+  background-color: #e3dfcf;
+  color: #ad5f5f;
+}
+.date-selection {
+  font-size: large;
+  text-align: center;
+}
+
+#close-modal {
+  position: absolute;
+  fill: white;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 80px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.show-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+#show-name {
+  margin: 0px;
+  font-size: 25px;
+}
+.show-info {
+  font-size: 20px;
+}
+
+.show-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.modal-logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}

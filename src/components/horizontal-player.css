@@ -1,0 +1,53 @@
+.header .play-button {
+  width: 75px;
+  height: 75px;
+  padding-top: 0px;
+}
+.header .player {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  font-family: "global";
+  padding-right: 0px;
+  margin-top: 0px;
+}
+.player .play-button {
+  padding-left: 10px;
+}
+.artist-image-wrapper .album-image {
+  height: 70px;
+  width: 70px;
+}
+.artist-image-wrapper {
+  display: flex;
+  height: 75px;
+  align-items: center;
+}
+.player .horizontal-player {
+  display: flex;
+  flex-direction: row;
+  background-color: #e3dfcf90;
+  align-items: center;
+  border-radius: 300px 200px 350px 200px;
+}
+.player .track-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+  color: #ad5f5f;
+}
+.player .artist-name {
+  font-size: 20px;
+  max-width: 400px;
+  overflow: ellipsis;
+}
+
+.player .track-name {
+  max-width: 400px;
+  overflow: ellipsis;
+}

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import ScrollBannerHorizontal from "./scroll-banner-horizontal";
 
@@ -11,6 +11,8 @@ import Chat from "./Chat";
 import { ReactComponent as CalendarLogo } from "../assets/calendar.svg";
 import { ReactComponent as MessageLogo } from "../assets/messages.svg";
 function HomePage() {
+  const audioRef = useRef(new Audio("https://raxdio.com/radio"));
+
   const [tracks, setTracks] = useState(null);
   const [showArtist, setShowArtist] = useState(true);
   const [showChat, setShowChat] = useState(false);
@@ -78,7 +80,7 @@ function HomePage() {
         <div className="now-playing">
           <div className="now-playing-content">
             <div className="player">
-              <RadioPlayer />
+              <RadioPlayer audio={audioRef.current} />
 
               <div className="now-playing-text">{playingInfo}</div>
             </div>

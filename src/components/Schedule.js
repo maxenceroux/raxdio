@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../schedule.css";
 import { useNavigate } from "react-router-dom";
-
+import Header from "./Header";
+import SlotConfirmationModal from "./SlotConfirmationModal";
+import SlotDescriptionModal from "./SlotDescriptionModal";
 const daysOfWeek = [
   "Sunday",
   "Monday",
@@ -16,6 +18,12 @@ const Schedule = () => {
   const [schedule, setSchedule] = useState([]);
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [shows, setShows] = useState([]);
+  const [selectedShow, setSelectedShow] = useState();
+  const [showSlotConfirmationModal, setShowSlotConfirmationModal] =
+    useState(false);
+  const [showSlotDescriptionModal, setShowSlotDescriptionModal] =
+    useState(false);
+
   const navigate = useNavigate();
   useEffect(() => {
     const now = new Date();
@@ -75,9 +83,23 @@ const Schedule = () => {
 
   const handleSlotClick = (start) => {
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    setSelectedSlot(
-      new Date(start.toLocaleString("en-US", { timeZone: userTimeZone }))
+    const selectedTime = new Date(
+      start.toLocaleString("en-US", { timeZone: userTimeZone })
     );
+    const show = shows.find((show) => {
+      const showTime = new Date(show.start_time).toLocaleString("en-US", {
+        timeZone: userTimeZone,
+      });
+      return new Date(showTime).getTime() === selectedTime.getTime();
+    });
+
+    if (show) {
+      setShowSlotDescriptionModal(true);
+      setSelectedShow(show);
+    } else {
+      setShowSlotConfirmationModal(true);
+    }
+    setSelectedSlot(selectedTime);
   };
 
   const handleValidateSlot = () => {
@@ -86,6 +108,7 @@ const Schedule = () => {
 
   return (
     <div className="schedule">
+      <Header />
       <div className="schedule__header">
         <div className="schedule__hour-column" />
         {schedule[0]?.map((slot, index) => (
@@ -109,6 +132,8 @@ const Schedule = () => {
                 <div
                   key={index}
                   className={`schedule__day-cell ${
+                    show ? "existing-show" : ""
+                  } ${
                     selectedSlot?.time === slot.time &&
                     selectedSlot?.dayOfWeek === slot.dayOfWeek &&
                     "schedule__day-cell--selected"
@@ -122,16 +147,18 @@ const Schedule = () => {
           </div>
         ))}
       </div>
-      {selectedSlot && (
-        <div className="schedule__selected-slot">
-          You selected:{" "}
-          {selectedSlot.toLocaleString([], {
-            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-            hour: "2-digit",
-            minute: "2-digit",
-          })}
-          <button onClick={handleValidateSlot}>Validate slot</button>
-        </div>
+      {showSlotConfirmationModal && (
+        <SlotConfirmationModal
+          slot={selectedSlot}
+          onClose={() => setShowSlotConfirmationModal(false)}
+          onConfirm={handleValidateSlot}
+        />
+      )}
+      {showSlotDescriptionModal && (
+        <SlotDescriptionModal
+          show={selectedShow}
+          onClose={() => setShowSlotDescriptionModal(false)}
+        />
       )}
     </div>
   );

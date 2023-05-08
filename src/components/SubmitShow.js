@@ -7,6 +7,11 @@ const SubmitShow = () => {
   const [name, setName] = React.useState("");
   const [showName, setShowName] = React.useState("");
   const [playlistUrl, setPlaylistUrl] = React.useState("");
+  const [description, setDescription] = React.useState("");
+  const [soundcloudUrl, setSoundcloudUrl] = React.useState("");
+  const [igUrl, setIgUrl] = React.useState("");
+  const [bcUrl, setBcUrl] = React.useState("");
+
   const [tracks, setTracks] = useState(null);
 
   useEffect(() => {
@@ -61,6 +66,10 @@ const SubmitShow = () => {
         author: name,
         name: showName,
         playlist_url: playlistUrl,
+        description: description,
+        ig_url: igUrl,
+        bc_url: bcUrl,
+        sc_url: soundcloudUrl,
       }),
     };
     console.log(requestOptions);
@@ -166,6 +175,35 @@ const SubmitShow = () => {
           value={playlistUrl}
           onChange={(event) => setPlaylistUrl(event.target.value)}
           required
+        />
+        <label htmlFor="description">Playlist description:</label>
+        <input
+          type="text"
+          id="description"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+          required
+        />
+        <label htmlFor="soundcloudUrl">Soundcloud URL:</label>
+        <input
+          type="url"
+          id="scUrl"
+          value={soundcloudUrl}
+          onChange={(event) => setSoundcloudUrl(event.target.value)}
+        />
+        <label htmlFor="bandcampUrl">Bandcamp URL:</label>
+        <input
+          type="url"
+          id="bandcampUrl"
+          value={bcUrl}
+          onChange={(event) => setBcUrl(event.target.value)}
+        />
+        <label htmlFor="igUrl">Instagram URL:</label>
+        <input
+          type="url"
+          id="igUrl"
+          value={igUrl}
+          onChange={(event) => setIgUrl(event.target.value)}
         />
         <br />
         <button type="submit">Submit</button>

@@ -3,19 +3,19 @@ import React from "react";
 class RadioPlayer extends React.Component {
   constructor(props) {
     super(props);
-    this.audio = new Audio("https://raxdio.com/radio");
     this.state = { isPlaying: false };
   }
 
   handleClick = () => {
-    if (this.audio.paused || this.audio.ended) {
-      this.audio.play();
+    if (this.props.audio.paused || this.props.audio.ended) {
+      this.props.audio.play();
       this.setState({ isPlaying: true });
     } else {
-      this.audio.pause();
+      this.props.audio.pause();
       this.setState({ isPlaying: false });
     }
   };
+
   render() {
     return (
       <img

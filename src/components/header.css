@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  column-gap: 20%;
+  justify-content: space-between;
+  background-image: url("../assets/background-image.jpg");
+  background-size: 60%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.raxdio {
+  font-family: "kaerukaeru", sans-serif;
+  font-size: 70px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #e3dfcf;
+}
