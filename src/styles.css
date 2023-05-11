@@ -119,6 +119,7 @@ input::placeholder {
 #calendar-logo {
   height: 30px;
   width: 30px;
+  margin-bottom: 32px !important;
   fill: #e3dfcf;
   position: absolute;
   bottom: 0;

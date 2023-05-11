@@ -6,7 +6,8 @@ const Header = () => {
   return (
     <div className="header">
       <Link className="raxdio" to="/">
-        <p className="raxdio">RAXDIO</p>
+        <p className="raxdio raxdio-desktop">RAXDIO</p>
+        <p className="raxdio raxdio-mobile">œ</p>
       </Link>
       <div className="player">
         <HorizontalPlayer />

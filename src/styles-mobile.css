@@ -25,6 +25,12 @@
     height: 25px;
     width: 25px;
   }
+  #calendar-logo {
+    top: 24%;
+    left: 0;
+    height: 25px;
+    width: 25px;
+  }
   .tell-us {
     width: 90%;
   }

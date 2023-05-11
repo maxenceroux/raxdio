@@ -38,7 +38,7 @@ const Schedule = () => {
     const endDate = new Date(startDate.getTime() + 7 * 24 * 60 * 60 * 1000);
     const newSchedule = [];
 
-    for (let hour = 8; hour < 23; hour++) {
+    for (let hour = 8; hour <= 23; hour++) {
       const time = `${hour < 10 ? "0" + hour : hour}:00`;
       const hourSchedule = [];
 
@@ -65,7 +65,7 @@ const Schedule = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:8002/shows")
+    fetch(`${process.env.API_URL}/shows`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

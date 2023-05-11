@@ -61,6 +61,7 @@
 .schedule__hour-row {
   display: flex;
   flex-direction: row;
+  width: 2596px;
 }
 
 .existing-show {

@@ -51,7 +51,7 @@ const SlotConfirmationModal = ({ slot, onClose, onConfirm }) => {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      backgroundColor: "rgba(0, 0, 0, 0.4)",
+      backgroundColor: "rgba(0, 0, 0, 0.8)",
       borderRadius: "300px 200px 350px 200px",
       border: "solid 0px",
       padding: "20px",
@@ -62,7 +62,12 @@ const SlotConfirmationModal = ({ slot, onClose, onConfirm }) => {
   };
 
   return (
-    <Modal isOpen={true} style={customStyles} onRequestClose={onClose}>
+    <Modal
+      id="modal-confirmation"
+      isOpen={true}
+      style={customStyles}
+      onRequestClose={onClose}
+    >
       <div className="modal-content">
         <h2>It looks like you'd be the perfect curator!</h2>
         <p>Do you want to book the following slot to share your hidden gems?</p>

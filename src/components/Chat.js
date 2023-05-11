@@ -48,7 +48,7 @@ const Chat = ({ isVisible, handleCancelClick }) => {
   }, [messages]);
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:3020");
+    socketRef.current = io(process.env.CHAT_API_URL, { path: "/socket.io" });
 
     socketRef.current.on("chat message", (msg) => {
       setMessages((prevMessages) => [...prevMessages, msg]);

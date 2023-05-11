@@ -11,8 +11,6 @@
 }
 button {
   background-color: #e3dfcf90;
-  border-radius: 20px;
-  border: solid 1px #e3dfcf;
   cursor: pointer;
   font-size: 15px;
   font-family: "global";
@@ -63,9 +61,37 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  column-gap: 10px;
+  width: 50%;
 }
 .modal-logo {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+#bc-logo {
+  fill: #e3dfcf;
+}
+@media only screen and (max-width: 1000px) {
+  #modal-description {
+    width: 300px;
+  }
+  .modal-content {
+    max-width: 300px;
+    margin: 30px;
+  }
+  #modal-confirmation {
+    width: 300px;
+    font-size: 15px;
+  }
+  .show-description {
+    width: 200px;
+  }
+  .show-description > p {
+    font-size: 15px;
+  }
+  #close-modal {
+    right: 50px;
+  }
 }

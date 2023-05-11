@@ -1,0 +1,76 @@
+.tracklist-wrapper {
+  height: 100%;
+}
+.tracklist {
+  font-size: 15px;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.track:hover {
+  background-color: #ad5f5f30;
+}
+#remove-track {
+  fill: #ad5f5f;
+  width: 30px;
+}
+
+ol {
+  margin: 0px;
+  padding: 25px;
+}
+
+.background-overflow {
+  background-size: 200% 160% !important;
+  background-position-x: -50vw;
+  background-position-y: -21px;
+  transition: all 0.5s ease-in-out;
+  height: auto !important;
+}
+
+.buttons-row-tracklist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+::-webkit-file-upload-button {
+  display: none;
+}
+
+.tracklist input {
+  padding-left: 10px;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 13px;
+  height: 25px !important;
+}
+
+.file-input-label {
+  padding-left: 10px;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 13px;
+  height: 25px !important;
+}
+
+.file-input-label:hover {
+  background-color: #ad5f5f;
+  color: #e3dfcf;
+}

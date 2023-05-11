@@ -17,3 +17,26 @@
   text-decoration: none;
   color: #e3dfcf;
 }
+.raxdio-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .raxdio-desktop {
+    display: none;
+  }
+  .raxdio-mobile {
+    display: inline-block;
+    font-family: "kaerukaeru", sans-serif;
+    font-size: 70px;
+    margin-top: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #e3dfcf;
+  }
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+    column-gap: 15px;
+  }
+}

@@ -51,7 +51,7 @@ const SlotDescriptionModal = ({ show, onClose }) => {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      backgroundColor: "rgba(0, 0, 0, 0.4)",
+      backgroundColor: "rgba(0, 0, 0, 0.8)",
       borderRadius: "300px 200px 350px 200px",
       border: "solid 0px",
       padding: "20px",
@@ -62,7 +62,12 @@ const SlotDescriptionModal = ({ show, onClose }) => {
   };
 
   return (
-    <Modal isOpen={true} style={customStyles} onRequestClose={onClose}>
+    <Modal
+      id="modal-description"
+      isOpen={true}
+      style={customStyles}
+      onRequestClose={onClose}
+    >
       <div className="modal-content">
         <Cancel id="close-modal" onClick={handleClose} />
 
@@ -83,7 +88,7 @@ const SlotDescriptionModal = ({ show, onClose }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BC className="modal-logo" />{" "}
+                <BC id="bc-logo" className="modal-logo" />{" "}
               </a>
             ) : null}
             {show.soundcloud_url ? (
