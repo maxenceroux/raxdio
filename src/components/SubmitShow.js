@@ -64,7 +64,7 @@ const SubmitShow = () => {
     if (showName && name) {
       const interval = setInterval(() => {
         fetch(
-          `${process.env.API_URL}/playlist_tracks?show_time=${selectedSlot}&show_name=${showName}&show_author=${name}`
+          `${process.env.REACT_APP_API_URL}/playlist_tracks?show_time=${selectedSlot}&show_name=${showName}&show_author=${name}`
         )
           .then((response) => response.json())
           .then((data) => {
@@ -106,7 +106,7 @@ const SubmitShow = () => {
       };
       console.log(requestOptions);
 
-      fetch(`${process.env.API_URL}/show`, requestOptions)
+      fetch(`${process.env.REACT_APP_API_URL}/show`, requestOptions)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");

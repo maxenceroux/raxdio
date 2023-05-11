@@ -73,6 +73,9 @@ button:hover {
 #bc-logo {
   fill: #e3dfcf;
 }
+#modal-tracklist-confirmation #close-modal {
+  right: 30px;
+}
 @media only screen and (max-width: 1000px) {
   #modal-description {
     width: 300px;
@@ -92,6 +95,6 @@ button:hover {
     font-size: 15px;
   }
   #close-modal {
-    right: 50px;
+    right: 50px !important;
   }
 }

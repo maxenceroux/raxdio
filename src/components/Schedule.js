@@ -65,7 +65,8 @@ const Schedule = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`${process.env.API_URL}/shows`)
+    console.log(process.env.REACT_APP_API_URL);
+    fetch(`${process.env.REACT_APP_API_URL}/shows`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

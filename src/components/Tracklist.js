@@ -1,10 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { ReactComponent as Cancel } from "../assets/cancel.svg";
+import TracklistSavedModal from "./TracklistSavedModal";
 import "./tracklist.css";
 
 const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
   const [tracks, setTracks] = useState(playlistTracks);
+  const [showTracklistConfirmationModal, setShowTracklistConfirmationModal] =
+    useState(false);
   useEffect(() => {
     const container = document.getElementsByClassName(
       "submit-show-container"
@@ -19,7 +22,7 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
     const formData = new FormData();
     formData.append("file", file);
 
-    fetch(`${process.env.API_URL}/upload_track`, {
+    fetch(`${process.env.REACT_APP_API_URL}/upload_track`, {
       method: "POST",
       body: formData,
     })
@@ -62,7 +65,7 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
       ordered_tracks: tracks,
     };
     console.log(playlist);
-    fetch(`${process.env.REACT_APP_BASE_URL}/save_playlist`, {
+    fetch(`${process.env.REACT_APP_API_URL}/save_playlist`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -77,8 +80,7 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
       })
       .then((data) => {
         console.log(data);
-        alert("Playlist saved successfully!");
-        window.location.href = "/schedule";
+        setShowTracklistConfirmationModal(true);
       })
       .catch((error) => {
         console.error("There was a problem saving the playlist:", error);
@@ -133,6 +135,11 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
           <button onClick={savePlaylist}>Save tracklist</button>
         </div>
       </div>
+      {showTracklistConfirmationModal && (
+        <TracklistSavedModal
+          onClose={() => setShowTracklistConfirmationModal(false)}
+        />
+      )}
     </div>
   );
 };
