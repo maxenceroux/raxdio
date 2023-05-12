@@ -97,6 +97,10 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
       </h3>
       <h3>
         You can rearrange your tracks' order to compile the perfect tracklist.
+        Tracks will be read in order of appearance. <br />
+        Be aware that tracklists of less than one hour will be played in a loop
+        while tracklists of more than one hour will be stopped at the end of the
+        dedicated time slot
       </h3>
       <h3>
         Hitting <i>Save tracklist</i> button will automatically load your
