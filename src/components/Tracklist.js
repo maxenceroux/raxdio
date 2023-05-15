@@ -8,6 +8,8 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
   const [tracks, setTracks] = useState(playlistTracks);
   const [showTracklistConfirmationModal, setShowTracklistConfirmationModal] =
     useState(false);
+  const [uploading, setUploading] = useState(false);
+
   useEffect(() => {
     const container = document.getElementsByClassName(
       "submit-show-container"
@@ -18,7 +20,7 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
   }, []);
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-
+    setUploading(true);
     const formData = new FormData();
     formData.append("file", file);
 
@@ -32,8 +34,12 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
           ...tracks,
           { title: data.filename, artist: "" },
         ]);
+        setUploading(false);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        setUploading(false);
+      });
   };
 
   const handleDragStart = (event, index) => {
@@ -138,6 +144,7 @@ const Tracklist = ({ playlistTracks, selectedSlot, name, showName }) => {
           />
           <button onClick={savePlaylist}>Save tracklist</button>
         </div>
+        <div id="uploading"> {uploading && <p>Uploading MP3...</p>}</div>
       </div>
       {showTracklistConfirmationModal && (
         <TracklistSavedModal

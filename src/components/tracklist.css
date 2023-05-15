@@ -31,9 +31,8 @@ ol {
 }
 
 .background-overflow {
-  background-size: 200% 160% !important;
-  background-position-x: -50vw;
-  background-position-y: -21px;
+  background-color: #e3dfcf;
+  background-image: none !important;
   transition: all 0.5s ease-in-out;
   height: auto !important;
 }
@@ -73,4 +72,9 @@ ol {
 .file-input-label:hover {
   background-color: #ad5f5f;
   color: #e3dfcf;
+}
+
+#uploading {
+  color: #ad5f5f;
+  font-size: 14px;
 }
