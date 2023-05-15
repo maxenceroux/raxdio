@@ -11,6 +11,7 @@ body {
   margin: 0px;
   color: #e3dfcf;
   font-family: "global";
+  overscroll-behavior: none;
 }
 
 .App {

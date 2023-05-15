@@ -203,3 +203,14 @@ iframe {
     margin-top: 0px;
   }
 }
+
+@media only screen and (max-height: 700px) {
+  .submit-show-wrapper {
+    height: 700px;
+  }
+  .submit-show-container {
+    background-position-y: -110px;
+    background-position-x: -90px;
+    background-size: 150% 150%;
+  }
+}
