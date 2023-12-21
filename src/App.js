@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import Schedule from "./components/Schedule";
 import SubmitShow from "./components/SubmitShow";
 import AudioProvider from "./components/AudioProvider";
+import Top from "./components/Top";
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/schedule" element={<Schedule />} />
+          <Route exact path="/top50" element={<Top />} />
           <Route
             exact
             path="/submit-show/:selectedSlot"

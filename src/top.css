@@ -1,0 +1,189 @@
+.top {
+  position: relative;
+  background-size: cover !important;
+  z-index: 1;
+  /* background-repeat: no-repeat; */
+  /* background-image: url("./assets/test2.svg"); */
+}
+.bi {
+  height: auto;
+  width: 100%;
+}
+.sp {
+  width: 30%;
+  top: 3.1%;
+  left: 60%;
+  max-height: 380px;
+  border-width: 0px;
+  position: absolute;
+}
+
+.sp-right {
+  left: 60%;
+}
+.sp-left {
+  left: 11.5%;
+}
+#modern-cosmology {
+  top: 3%;
+}
+#holy-tongue {
+  top: 5.1%;
+}
+#rainy {
+  top: 6.85%;
+}
+#trees {
+  top: 8.6%;
+}
+#tct {
+  top: 10.55%;
+}
+#dc {
+  top: 12.55%;
+}
+#cd {
+  top: 14.5%;
+}
+#ziur {
+  top: 16.6%;
+}
+#pmx {
+  top: 18.4%;
+}
+#groupo {
+  top: 20.4%;
+}
+#dqnmm {
+  top: 22.3%;
+}
+#king {
+  top: 24.3%;
+}
+#exek {
+  top: 26.05%;
+}
+#hand {
+  top: 28%;
+}
+#fp {
+  top: 29.9%;
+}
+#bi {
+  top: 31.7%;
+}
+#as {
+  top: 33.9%;
+}
+#tn {
+  top: 35.8%;
+}
+#lh {
+  top: 37.6%;
+}
+#lrain {
+  top: 39.7%;
+}
+#jo {
+  top: 41.6%;
+}
+#jb {
+  top: 43.6%;
+}
+#rahill {
+  top: 45.5%;
+}
+#sb {
+  top: 47.4%;
+}
+#dnfb {
+  top: 49.25%;
+}
+#tir {
+  top: 51.1%;
+}
+#ftd {
+  top: 53.1%;
+}
+#ale {
+  top: 55.1%;
+}
+#tita {
+  top: 57.1%;
+}
+#vz {
+  top: 58.9%;
+}
+#ea {
+  top: 60.8%;
+}
+#sc {
+  top: 62.8%;
+}
+#serg {
+  top: 64.5%;
+}
+#scq {
+  top: 66.5%;
+}
+#lg {
+  top: 68.5%;
+}
+#mr {
+  top: 70.65%;
+}
+#oo {
+  top: 72.6%;
+}
+#opn {
+  top: 74.2%;
+}
+#desca {
+  top: 76.3%;
+}
+#com {
+  top: 78.3%;
+}
+#nihil {
+  top: 80.3%;
+}
+#h31r {
+  top: 82.1%;
+}
+#ar {
+  top: 84.1%;
+}
+#loop {
+  top: 86%;
+}
+#pj {
+  top: 87.75%;
+}
+#ie {
+  top: 89.8%;
+}
+#fr {
+  top: 91.7%;
+}
+#mh {
+  top: 93.6%;
+}
+#mtts {
+  top: 95.5%;
+}
+#bg {
+  top: 97.4%;
+}
+.text-top {
+  color: #e3dfcf;
+  font-family: "kaeru kaeru", sans-serif;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 150px;
+  position: absolute;
+  top: 150px;
+
+  z-index: 1; /* Lower z-index for the text */
+}
