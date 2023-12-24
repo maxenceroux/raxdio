@@ -9,6 +9,7 @@
   height: auto;
   width: 100%;
 }
+
 .sp {
   width: 30%;
   top: 3.1%;
@@ -24,14 +25,28 @@
 .sp-left {
   left: 11.5%;
 }
+.mobileImage {
+  width: 80%;
+  left: 10%;
+  height: 100px;
+}
 #modern-cosmology {
   top: 3%;
+}
+#modern-cosmology.mobileImage {
+  top: 2.9%;
 }
 #holy-tongue {
   top: 5.1%;
 }
+#holy-tongue.mobileImage {
+  top: 4.8%;
+}
 #rainy {
   top: 6.85%;
+}
+#rainy.mobileImage {
+  top: 6.7%;
 }
 #trees {
   top: 8.6%;
@@ -42,32 +57,62 @@
 #dc {
   top: 12.55%;
 }
+#dc.mobileImage {
+  top: 12.5%;
+}
 #cd {
   top: 14.5%;
+}
+#cd.mobileImage {
+  top: 14.4%;
 }
 #ziur {
   top: 16.6%;
 }
+#ziur.mobileImage {
+  top: 16.3%;
+}
 #pmx {
   top: 18.4%;
+}
+#pmx.mobileImage {
+  top: 18.25%;
 }
 #groupo {
   top: 20.4%;
 }
+#groupo.mobileImage {
+  top: 20.2%;
+}
 #dqnmm {
   top: 22.3%;
+}
+#dqnmm.mobileImage {
+  top: 22.1%;
 }
 #king {
   top: 24.3%;
 }
+#king.mobileImage {
+  top: 24%;
+}
 #exek {
   top: 26.05%;
+}
+#exek.mobileImage {
+  top: 25.95%;
 }
 #hand {
   top: 28%;
 }
+#hand.mobileImage {
+  top: 27.9%;
+}
 #fp {
   top: 29.9%;
+}
+#fp.mobileImage {
+  top: 29.8%;
 }
 #bi {
   top: 31.7%;
@@ -75,104 +120,222 @@
 #as {
   top: 33.9%;
 }
+#as.mobileImage {
+  top: 33.6%;
+}
 #tn {
   top: 35.8%;
+}
+#tn.mobileImage {
+  top: 35.6%;
 }
 #lh {
   top: 37.6%;
 }
+#lh.mobileImage {
+  top: 37.5%;
+}
 #lrain {
   top: 39.7%;
+}
+#lrain.mobileImage {
+  top: 39.4%;
 }
 #jo {
   top: 41.6%;
 }
+#jo.mobileImage {
+  top: 41.3%;
+}
 #jb {
   top: 43.6%;
+}
+#jb.mobileImage {
+  top: 43.25%;
 }
 #rahill {
   top: 45.5%;
 }
+#rahill.mobileImage {
+  top: 45.2%;
+}
 #sb {
   top: 47.4%;
+}
+#sb.mobileImage {
+  top: 47.1%;
 }
 #dnfb {
   top: 49.25%;
 }
+#dnfb.mobileImage {
+  top: 49%;
+}
 #tir {
   top: 51.1%;
+}
+#tir.mobileImage {
+  top: 50.95%;
 }
 #ftd {
   top: 53.1%;
 }
+#ftd.mobileImage {
+  top: 52.9%;
+}
 #ale {
   top: 55.1%;
+}
+#ale.mobileImage {
+  top: 54.8%;
 }
 #tita {
   top: 57.1%;
 }
+#tita.mobileImage {
+  top: 56.7%;
+}
 #vz {
   top: 58.9%;
+}
+#vz.mobileImage {
+  top: 58.65%;
 }
 #ea {
   top: 60.8%;
 }
+#ea.mobileImage {
+  top: 60.6%;
+}
 #sc {
   top: 62.8%;
+}
+#sc.mobileImage {
+  top: 62.5%;
 }
 #serg {
   top: 64.5%;
 }
+#serg.mobileImage {
+  top: 64.4%;
+}
 #scq {
   top: 66.5%;
+}
+#scq.mobileImage {
+  top: 66.3%;
 }
 #lg {
   top: 68.5%;
 }
+#lg.mobileImage {
+  top: 68.25%;
+}
 #mr {
   top: 70.65%;
+}
+#mr.mobileImage {
+  top: 70.15%;
 }
 #oo {
   top: 72.6%;
 }
+#oo.mobileImage {
+  top: 72.1%;
+}
 #opn {
   top: 74.2%;
+}
+#opn.mobileImage {
+  top: 74.05%;
 }
 #desca {
   top: 76.3%;
 }
+#desca.mobileImage {
+  top: 75.95%;
+}
 #com {
   top: 78.3%;
+}
+#com.mobileImage {
+  top: 77.9%;
 }
 #nihil {
   top: 80.3%;
 }
+#nihil.mobileImage {
+  top: 79.8%;
+}
 #h31r {
   top: 82.1%;
+}
+#h31r.mobileImage {
+  top: 81.7%;
 }
 #ar {
   top: 84.1%;
 }
+#ar.mobileImage {
+  top: 83.65%;
+}
 #loop {
   top: 86%;
+}
+#loop.mobileImage {
+  top: 85.6%;
 }
 #pj {
   top: 87.75%;
 }
+#pj.mobileImage {
+  top: 87.5%;
+}
 #ie {
   top: 89.8%;
+}
+#ie.mobileImage {
+  top: 89.4%;
 }
 #fr {
   top: 91.7%;
 }
+#fr.mobileImage {
+  top: 91.35%;
+}
 #mh {
   top: 93.6%;
+}
+#mh.mobileImage {
+  top: 93.25%;
 }
 #mtts {
   top: 95.5%;
 }
+#mtts.mobileImage {
+  top: 95.15%;
+}
 #bg {
   top: 97.4%;
+}
+#bg.mobileImage {
+  top: 97.1%;
+}
+#sp_top_playlist {
+  width: 60%;
+  top: 99.5%;
+  left: 20%;
+  max-height: 100px;
+  border-width: 0px;
+  position: absolute;
+}
+#sp_top_playlist.mobileImage {
+  width: 80%;
+  top: 98.9%;
+  left: 10%;
+  max-height: 1000px;
+  border-width: 0px;
+  position: absolute;
 }
 .text-top {
   color: #e3dfcf;

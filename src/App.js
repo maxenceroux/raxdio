@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/schedule" element={<Schedule />} />
-          <Route exact path="/top50" element={<Top />} />
+          <Route exact path="/top-albums-2023" element={<Top />} />
           <Route
             exact
             path="/submit-show/:selectedSlot"
