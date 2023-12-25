@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../top.css";
+import { Link } from "react-router-dom";
 
 const Top = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,6 +35,14 @@ const Top = () => {
         alt="album"
         className="bi"
       />
+      <Link to="/">
+        <div className={`raxdio up ${isMobile ? "mobile" : ""}`}>&lt;&lt;</div>
+      </Link>
+      <Link to="/">
+        <div className={`raxdio bottom ${isMobile ? "mobile" : ""}`}>
+          &lt;&lt;
+        </div>
+      </Link>
 
       <iframe
         id="modern-cosmology"

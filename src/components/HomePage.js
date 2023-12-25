@@ -74,7 +74,6 @@ function HomePage() {
           </p>
           <p className="vertical-text">O</p>
         </div>
-
         <div className="now-playing">
           <div className="now-playing-content">
             <div className="player">

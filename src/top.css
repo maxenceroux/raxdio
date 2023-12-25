@@ -1,3 +1,27 @@
+.raxdio {
+  position: absolute;
+  font-family: "kaerukaeru";
+  letter-spacing: -20px;
+  left: 10%;
+  font-size: 100px;
+  cursor: pointer;
+}
+.raxdio.bottom {
+  top: 98.35%;
+}
+.raxdio.up {
+  top: 0.18%;
+}
+.raxdio.up.mobile {
+  top: 0.2%;
+  left: 5%;
+  font-size: 60px;
+}
+.raxdio.bottom.mobile {
+  top: 97.85%;
+  left: 5%;
+  font-size: 60px;
+}
 .top {
   position: relative;
   background-size: cover !important;

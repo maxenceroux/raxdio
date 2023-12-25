@@ -43,6 +43,11 @@ input::placeholder {
   margin: 0;
   font-family: "kaerukaeru", sans-serif;
 }
+.top {
+  margin: 0;
+  font-family: "kaerukaeru", sans-serif;
+}
+
 .vertical-text {
   margin: 0;
   text-orientation: upright;
